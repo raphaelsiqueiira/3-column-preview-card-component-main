@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --font-Lexend:'Lexend Deca', sans-serif;
+    --font-Big:'Big Shoulders Display', cursive;
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white : hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    color: var(--Very-light-gray);
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    text-align: left;
+    justify-items: center;
+    height: 450px;
+    margin: 0;
+    width: 300px;
+    padding: 42px;
+}
+
+#card1{
+    background-color: var(--Bright-orange);
+    border-radius: 8px 0px 0px 8px;
+}
+
+#card2{
+    background-color: var(--Dark-cyan);
+}
+
+#card3{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0px 8px 8px 0px;
+}
+
+section > p{
+    color: var(--Transparent-white);
+    font-size: 15px;
+    font-family: var(--font-Lexend);
+    font-weight: 400;
+    max-width: 190px;
+    margin-top: 25px;
+    margin-left: -0px;
+}
+
+h1{
+    color: var(--Transparent-white);
+    font-weight: 700;
+    font-family: var(--font-Big);
+    font-size: 3em;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+#card1 > button{
+    background-color: var(--Very-light-gray);
+    color: var(--Bright-orange);
+    border-radius: 20px;
+    width: 140px;
+    height: 40px;
+    margin-top: 65px;
+}
+
+#card1 > button:hover{
+    background-color: var(--Bright-orange);
+    color: var(--Transparent-white);
+    border: 1px var(--Very-light-gray) solid;
+}
+
+#card2 > button{
+    background-color: var(--Very-light-gray);
+    color: var(--Dark-cyan);
+    height: 40px;
+    border-radius: 20px;
+    width: 140px;
+    margin-top: 86px;
+}
+
+#card2 > button:hover{
+    background-color: var(--Dark-cyan);
+    color: var(--Transparent-white);
+    border: 1px var(--Very-light-gray) solid;
+}
+
+#card3 > button{
+    background-color: var(--Very-light-gray);
+    color: var(--Very-dark-cyan);
+    height: 40px;
+    border-radius: 20px;
+    width: 140px;
+    margin-top: 65px;
+}
+
+#card3 > button:hover{
+    background-color: var(--Very-dark-cyan);
+    color: var(--Transparent-white);
+    border: 1px var(--Very-light-gray) solid;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    
+}
+@media (max-width:1000px){
+
+    body{
+        min-height: 100vh;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #card1, #card2, #card3{
+        width: 100vw;
+        height: max-content;
+        border-radius: 0px;
+        overflow-x: hidden;
+        }
+
+        .attribution{
+            display: none;
+        }
+}
